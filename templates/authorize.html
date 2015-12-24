@@ -1,0 +1,45 @@
+{% block body %}
+  <h1>Authorize</h1>
+  <p>For application <b>{{client_name}}</b></p>
+  <form method="POST">
+    {% if state is not none %}
+        <input name="state" type="hidden" value="{{state}}"/>
+    {% endif %}
+    <input name="client_id" type="hidden" value="{{client_id}}"/>
+    <table>
+      <tbody>
+        <tr>
+          <td style="text-align:right">Phone:</td>
+          <td>
+            <input name="phone" type="tel" />
+          </td>
+        </tr>  
+        <tr>
+          <td style="text-align:right">Password:</td>
+          <td>
+            <input name="password" type="password" pattern="^.{6,}$"/>
+          </td>
+        </tr>  
+        <tr>
+          <td></td>
+          <td style="text-align:right">
+            <input type="submit" value="Sign in!"/>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td style="text-align:right">
+      <input type="submit" value="Registration" name="reg"/>
+       </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td style="text-align:right">
+          <input type="submit" value="Just go" name="go"/>
+        </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+
+{% endblock  %}

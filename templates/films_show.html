@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <form action=/films method="GET">
+        <table><tbody>
+        <tr><td>ID</td><td>ID_director</td><td>Title</td><td>Kinopoisk_rating</td></tr>
+        {% for film in films %}
+        <tr>
+            <td>{{film.id}}</td>
+            <td>{{film.id_director}}</td>
+            <td>{{film.title}}</td>
+            <td>{{film.kinopoisk_rating}}</td>
+        </tr>
+
+        {% endfor %}
+
+            </tbody></table>
+        <br>
+        Page: {{page}}
+        <br>
+        <input type="submit" value="Prev" name="prev">
+        <input type="submit" value="Next" name="next">
+    </form>
+</body>
+</html>

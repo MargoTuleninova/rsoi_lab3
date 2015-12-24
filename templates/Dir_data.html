@@ -1,0 +1,37 @@
+{% block body %}
+  <p>For application <b>{{client_name}}</b></p>
+  <form action=/dir_p method="GET">
+    <table>
+      <tbody>
+        <tr>
+          <td>ID_director:</td>
+          <td>
+            <input name="id_director" type="tel" />
+          </td>
+        </tr>
+        <tr>
+          <td>Name:</td>
+          <td>
+            <input name="name" />
+          </td>
+        </tr>
+        <tr>
+          <td>Birthday:</td>
+          <td>
+            <input name="birthday" pattern="[0-9][0-9][0-9][0-9].[0-9][0-9].[0-9][0-9]" />
+          </td>
+        </tr>
+        <tr>
+          <td>Country:</td>
+          <td>
+            <input name="country" pattern="^[A-Za-z]([-_]?[A-Za-z0-9]+)*$" />
+          </td>
+        </tr>
+        <tr>
+            <td><input name="post" type="submit" value="Add"></td>
+            <td><input name="put" type="submit" value="Edit"></td>
+        </tr>
+        </tbody>
+        </table>
+      </form>
+{% endblock %}

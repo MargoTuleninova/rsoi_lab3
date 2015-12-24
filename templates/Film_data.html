@@ -1,0 +1,55 @@
+{% block body %}
+  <p>For application <b>{{client_name}}</b></p>
+  <form action=/film_p method="GET">
+    <table>
+      <tbody>
+        <tr>
+          <td>ID:</td>
+          <td>
+            <input name="id" type="tel" />
+          </td>
+        </tr>
+        <tr>
+          <td>ID_director:</td>
+          <td>
+            <input name="id_director" type="tel" />
+          </td>
+        </tr>
+        <tr>
+          <td>Title:</td>
+          <td>
+            <input name="title" pattern="^[A-Za-z]([-_]?[A-Za-z0-9]+)*$" />
+          </td>
+        </tr>
+        <tr>
+          <td>Duration:</td>
+          <td>
+            <input name="duration" pattern="[0-9][0-9]:[0-9][0-9]:[0-9][0-9]" />
+          </td>
+        </tr>
+        <tr>
+          <td>Year:</td>
+          <td>
+            <input name="year" type="tel" />
+          </td>
+        </tr>
+        <tr>
+          <td>Genre:</td>
+          <td>
+            <input name="genre" pattern="^[A-Za-z]([-_]?[A-Za-z0-9]+)*$" />
+          </td>
+        </tr>
+        <tr>
+          <td>Kinopoisk_rating:</td>
+          <td>
+            <input name="kinopoisk_rating" pattern="[0-9].[0-9][0-9]" />
+          </td>
+        </tr>
+        <tr>
+            <td><input name="post" type="submit" value="Add"></td>
+            <td><input name="put" type="submit" value="Edit"></td>
+        </tr>
+        </tbody>
+        </table>
+      </form>
+{% endblock %}

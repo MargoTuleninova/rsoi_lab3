@@ -1,0 +1,46 @@
+
+
+{% block body %}
+    <form id="form1" method="post">
+    <div>
+    <table>
+        <tr>
+        <th colspan ="2"><h1>Registration</h1></th>
+       </tr>
+       <tr>
+        <td>
+            <h2>Name:</h2>
+        </td>
+        <td> <input name="name" class="textarea" pattern="^[A-Za-z]([-_]?[A-Za-z0-9]+)*$"/></td>
+      </tr>
+        <tr>
+        <td>
+            <h2>Password:</h2>
+        </td>
+        <td>   <input name="password" class="textarea" type="password" pattern="^.{6,}$"/>
+        </td>
+      </tr>
+        <tr>
+        <td>
+            <h2>E-Mail:</h2>
+        </td>
+        <td> <input name="email" type="email" class="textarea"/></td>
+      </tr>
+        <tr>
+        <td>
+            <h2>Phone:</h2>
+        </td>
+        <td>   <input name="phone" type="tel" class="textarea"/>
+        </td>
+      </tr>
+        <tr><td></td><td></td></tr>
+        <tr><td></td><td></td></tr>
+        <tr>
+             <th colspan ="2">
+                <input type="submit" class="button7" value="Register!"/>
+             </th>
+        </tr>
+    </table>
+    </div>
+    </form>
+{% endblock  %}

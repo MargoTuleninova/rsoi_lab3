@@ -1,0 +1,19 @@
+{% block body %}
+  <p>For application <b>{{client_name}}</b></p>
+  <form action=/film method="GET">
+    <table>
+      <tbody>
+        <tr>
+          <td>ID:</td>
+          <td>
+            <input name="id" type="tel" />
+          </td>
+        </tr>
+        <tr>
+            <td><input name="show" type="submit" value="Show"></td>
+            <td><input name="delete" type="submit" value="Delete"></td>
+        </tr>
+        </tbody>
+        </table>
+      </form>
+{% endblock %}
